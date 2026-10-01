@@ -1,0 +1,6 @@
+# Ignore python virtual environment & caches
+.venv/
+__pycache__/
+*.pyc
+
+# Optional: keep generated assets tracked, or regenerate on CI
