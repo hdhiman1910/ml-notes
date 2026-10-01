@@ -1,14 +1,18 @@
-# ml-notes
-Test: GitHub Actions
+# Machine Learning Notes: Activation Functions
 
+## 1. Sigmoid Function
 
-## Structure
+The standard logistic sigmoid function maps any real-valued number into the open interval $(0, 1)$:
 
-ml-notes/  
-├── assets/  
-│    └── sigmoid_activation.png   <-- generated automatically  
-├── scripts/  
-│    └── plot_sigmoid.py  
-├── .gitignore  
-├── requirements.txt  
-└── README.md                    <-- or topic-specific file, e.g. 01_activations.md
+$$\sigma(x) = \frac{1}{1 + e^{-x}}$$
+
+### Mathematical Properties
+* **Range:** $0 < \sigma(x) < 1$
+* **Symmetry:** $\sigma(-x) = 1 - \sigma(x)$
+* **Derivative:** 
+  $$\sigma'(x) = \sigma(x)(1 - \sigma(x))$$
+
+### Visualization
+![Sigmoid Activation and Derivative](assets/sigmoid_activation.png)
+
+> **Vanishing Gradient Issue:** Notice that for $|x| > 4$, the derivative $\sigma'(x) \to 0$. In deep neural networks, this causes gradient backpropagation signals to vanish rapidly.
