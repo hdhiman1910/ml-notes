@@ -2,8 +2,9 @@ name: Generate Plots
 
 on:
   push:
-    paths:
-      - 'scripts/**'
+    branches:
+      - main
+  workflow_dispatch: # Allows you to click a button to run it manually anytime
 
 permissions:
   contents: write
